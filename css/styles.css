@@ -3,7 +3,7 @@
 styles.css*/
 
 /* CSS Reset */
-body header nav main footer img h1 h3 ul {
+aside body figure figcaption header nav main footer img h1 h3 ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -78,6 +78,22 @@ main h3 {
 main ul {
   list-style-type: square;
 }
+aside {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-shadow: 4px 4px 10px #c5a687;
+}
+figure {
+  border: 4px solid #2a1f14;
+  box-shadow: 6px 6px 10px #c5a687;
+  max-width: 400px;
+  margin: 2% auto;
+}
+figcaption {
+  padding: 2%;
+  border-top: 4px solid #2a1f14;
+}
 .link {
   color: #4d3319;
   text-decoration: none;
@@ -142,19 +158,13 @@ footer a {
   nav li a {
     padding: 0.5em;
   }
-}
-
-/* Media Query for Large Desktop Viewports */
-@media screen and (min-width: 1921px) {
-  body {
-    background: linear-gradient(to right, #f6eee4, #78593a);
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px
   }
-  #wrapper {
-    width: 1920px;
-    margin: 0 auto;
-  }
-  main {
-    background-color: #f6eee4;
+  aside {
+    grid-column: 1 /span 2;
   }
 }
 
@@ -178,10 +188,43 @@ footer a {
   nav li a:hover {
     color: #2a1f14;
     background-color: #f6eee4;
+    opacity: 0.5;
   }
 
   /* Desktop Viewport: Style rules for main content */
   #info ul {
     margin-left: 5%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  aside {
+    grid-column: 1 / span 3;
+    font-size: 2em;
+  }
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+  body {
+    background: linear-gradient(to right, #f6eee4, #78593a);
+  }
+  #wrapper {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  main {
+    background-color: #f6eee4;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  aside {
+    grid-column: 1 / span 4;
+    font-size: 3em;
   }
 }
