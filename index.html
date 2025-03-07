@@ -71,5 +71,11 @@
 </html>
 
 <!-- 
-  For the <aside> element, I would add a background color, something light for better contrast. For the <figure> element, I would round out the border using border-radius, add a white background to it to have it stand out as well, and maybe even a box-shadow as discussed in this chapter (box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);). The <figcaption> element would be the simplest to improve. I would center the text to make it more readable and maybe make the text slightly larger since it is the only things that is read on the page. Padding from the top would add a little separation from the image. 
+  Yes, it is possible to styles captions using the CSS pseudo-element ::cue. This element allows you to styles captions and other cues that are in VTT tracks. The example below would change the default white color of captions to yellow in the video. 
+
+  Example: 
+
+  video::cue {
+    color: yellow;
+  }
 -->
